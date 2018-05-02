@@ -1,0 +1,35 @@
+{
+  "types": [{
+      "new_type_name": "account_name",
+      "type": "name"
+    }
+  ],
+  "structs": [{
+      "name": "config",
+      "base": "",
+      "fields": {
+        "key": "name",
+        "owner": "name"
+      }
+    },{
+      "name": "setowner",
+      "base": "",
+      "fields": {
+        "owner": "name"
+      }
+    }
+  ],
+  "actions": [{
+      "action_name": "setowner",
+      "type": "setowner"
+    }
+  ],
+  "tables": [{
+      "table_name": "configs",
+      "type": "config",
+      "index_type": "i64",
+      "key_names" : ["key"],
+      "key_types" : ["name"]
+    }
+  ]
+}

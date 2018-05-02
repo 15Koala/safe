@@ -1,0 +1,43 @@
+{
+  "types": [],
+  "structs": [{
+      "name": "afs_tokens",
+      "base": "",
+      "fields": {
+        "quantity": "uint64"
+      }
+    },{
+      "name": "transfer",
+      "base": "",
+      "fields": {
+        "from": "account_name",
+        "to": "account_name",
+        "quantity": "afs_tokens"
+      }
+    },{
+      "name": "account",
+      "base": "",
+      "fields": {
+        "key": "uint64",
+        "balance": "afs_tokens"
+      }
+    }
+  ],
+  "actions": [{
+      "action_name": "transfer",
+      "type": "transfer"
+    }
+  ],
+  "tables": [{
+      "table_name": "account",
+      "index_type": "i64",
+      "key_names": [
+        "key"
+      ],
+      "key_types": [
+        "uint64"
+      ],
+      "type": "account"
+    }
+  ]
+}

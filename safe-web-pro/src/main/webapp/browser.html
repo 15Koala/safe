@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>区块链浏览器</title>
+    <link rel="stylesheet" type="text/css" href="common/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/browser.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header id="browser_header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#index-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">更多</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">汇链科技</a>
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse" id="index-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+                        <li>
+                            <a href="other/SAFEv1.pdf" target="_blank">白皮书</a>
+                        </li>
+                        <li class="active">
+                            <a href="browser.html" target="_blank">区块链浏览器</a>
+                        </li>
+                        <li>
+                            <a href="#">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="col-xs-12 col-sm-6" id="basic_message">
+                <ul class="bg-primary">
+                    <li>
+                        <img class="img-responsive basic_image" src="images/global.png" />
+                        <div class="basic_image_right">
+                            <p class="second_title">
+                                <a href="">这里是第一行字</a>
+                            </p>
+                            <p class="first_title">这里是第二行字</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-xs-6 nopadding">
+                            <p class="first_title text_left">第一行字</p>
+                            <p class="first_title text_left">第2行字</p>
+                        </div>
+                        <div class="col-xs-6 nopadding">
+                            <p class="first_title text_right">第1行字</p>
+                            <p class="first_title text_right">第2行字</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-xs-6 nopadding">
+                            <p class="second_title text_left">第一行字</p>
+                            <p class="second_title text_left">第2行字</p>
+                        </div>
+                        <div class="col-xs-6 nopadding">
+                            <p class="second_title text_right">第一行字</p>
+                            <p class="second_title text_right">第二行字</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6" id="day_chart">
+                <div id="chart_wrap"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6" id="blocks">
+                <div class="list_div_wrap">
+                    <div class="list_head">
+                        <span>图标</span>
+                        <span>文字部分</span>
+                        <button class="float_right">查看全部</button>
+                    </div>
+                    <div class="list_body">
+                        <ul>
+                            <li>
+                                <div class="list_left_image">
+                                    <img src="images/timg.jpeg" alt="">
+                                </div>
+                                <div class="list_left_message">
+                                    <p>第一行信息</p>
+                                    <p>第2行信息</p>
+                                    <p>第3行信息</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list_left_image">
+                                    <img src="images/timg.jpeg" alt="">
+                                </div>
+                                <div class="list_left_message">
+                                    <p>第一行信息</p>
+                                    <p>第2行信息</p>
+                                    <p>第3行信息</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6" id="transactions">
+                <div class="list_div_wrap">
+                    <div class="list_head">
+                        <span>图标</span>
+                        <span>文字部分</span>
+                        <button class="float_right">查看全部</button>
+                    </div>
+                    <div class="list_body">
+                        <ul>
+                            <li>
+                                <div class="row list_right_row">
+                                    <div class="list_right_image">
+                                        <img src="images/timg.jpeg" alt="">
+                                    </div>
+                                    <div class="list_right_title">
+                                        <p class="list_right_mainTitle">我是大标题</p>
+                                        <p class="list_right_reduce">我是小标题</p>
+                                    </div>
+                                </div>
+                                <div class="row list_right_row margin-top7">
+                                    <div class="float_left">
+                                        大约有多少人
+                                    </div>
+                                    <div class="float_right">
+                                        大约多久了
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row list_right_row">
+                                    <div class="list_right_image">
+                                        <img src="images/timg.jpeg" alt="">
+                                    </div>
+                                    <div class="list_right_title">
+                                        <p class="list_right_mainTitle">我是大标题</p>
+                                        <p class="list_right_reduce">我是小标题</p>
+                                    </div>
+                                </div>
+                                <div class="row list_right_row margin-top7">
+                                    <div class="float_left">
+                                        大约有多少人
+                                    </div>
+                                    <div class="float_right">
+                                        大约多久了
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row list_right_row">
+                                    <div class="list_right_image">
+                                        <img src="images/timg.jpeg" alt="">
+                                    </div>
+                                    <div class="list_right_title">
+                                        <p class="list_right_mainTitle">我是大标题</p>
+                                        <p class="list_right_reduce">我是小标题</p>
+                                    </div>
+                                </div>
+                                <div class="row list_right_row margin-top7">
+                                    <div class="float_left">
+                                        大约有多少人
+                                    </div>
+                                    <div class="float_right">
+                                        大约多久了
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row list_right_row">
+                                    <div class="list_right_image">
+                                        <img src="images/timg.jpeg" alt="">
+                                    </div>
+                                    <div class="list_right_title">
+                                        <p class="list_right_mainTitle">我是大标题</p>
+                                        <p class="list_right_reduce">我是小标题</p>
+                                    </div>
+                                </div>
+                                <div class="row list_right_row margin-top7">
+                                    <div class="float_left">
+                                        大约有多少人
+                                    </div>
+                                    <div class="float_right">
+                                        大约多久了
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row list_right_row">
+                                    <div class="list_right_image">
+                                        <img src="images/timg.jpeg" alt="">
+                                    </div>
+                                    <div class="list_right_title">
+                                        <p class="list_right_mainTitle">我是大标题</p>
+                                        <p class="list_right_reduce">我是小标题</p>
+                                    </div>
+                                </div>
+                                <div class="row list_right_row margin-top7">
+                                    <div class="float_left">
+                                        大约有多少人
+                                    </div>
+                                    <div class="float_right">
+                                        大约多久了
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row list_right_row">
+                                    <div class="list_right_image">
+                                        <img src="images/timg.jpeg" alt="">
+                                    </div>
+                                    <div class="list_right_title">
+                                        <p class="list_right_mainTitle">我是大标题</p>
+                                        <p class="list_right_reduce">我是小标题</p>
+                                    </div>
+                                </div>
+                                <div class="row list_right_row margin-top7">
+                                    <div class="float_left">
+                                        大约有多少人
+                                    </div>
+                                    <div class="float_right">
+                                        大约多久了
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid footer_bg">
+            关于我们
+        </div>
+    </footer>
+
+    <script src="common/js/jquery.min.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <script src="other/plugin/highcharts.js"></script>
+    <script src="other/plugin/exporting.js"></script>
+    <script src="other/plugin/series-label.js"></script>
+    <script src="other/plugin/oldie.js"></script>
+    <script src="js/browser.js "></script>
+    <script></script>
+</body>

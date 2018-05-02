@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./dist/bundle-genesis.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="lib/css/main.css">
+  <link rel="stylesheet" href="lib/css/genesis.css">
+</head>
+<body id="loading">
+<div class="wrapper">
+    <h1>EOS Testnet <em>Genesis Block</em></h1>
+    Click the button below to generate a genesis block from the <a href="snapshot.csv">snapshot.csv</a> included in the <a target="_blank" href="https://github.com/eosio/genesis">EOSIO/genesis repository</a>. 
+    <button id="generate_genesis" onclick="download_genesis_json(genesis)">genesis.json</button>
+<!-- 
+    <em>snapshot.csv</em> has not yet been included in the repository, you can upload a snapshot generated from the <a href="./snapshot.html">EOS Snapshot Generator</a> to test this functionality if desired. -->
+</div>
+<div class="error wrapper">
+  <h1>Error: Snapshot not Found</h1>
+  Unable to locate snapshot.csv in the <a target="_blank" href="https://github.com/eosio/genesis">EOSIO/genesis repository</a>. This most likely means it has not yet been committed yet, please standby.
+</div>
+<div class="loader">
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+  <div class="blob blob-0"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="blob blob-5"></div>
+</div>
+</body>
+</html> 

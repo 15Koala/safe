@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./lib/vendor/web3.min.js" type="text/javascript"></script>
+  <script src="./dist/bundle.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="lib/css/main.css">
+  <link rel="stylesheet" href="lib/css/snapshot.css">
+</head>
+<body>
+<div class="testnet-message wrapper">
+  <h1>Attention</h1>
+  <p>You are presently generating a snapshot based on variables used to generate <a href="snapshot.csv">official testnet snapshot</a>. However, because EOS ERC20 tokens are liquid on the Ethereum network, and not frozen like they will be for <em>mainnet snapshot</em>, your snapshot will differ from the snapshot.csv committed to the <a target="_blank" href="https://github.com/eosio/genesis">EOSIO/genesis repository</a>. This is because ethereum balances of registrants are susceptible to change at anytime while tokens are liquid.</p>
+  <p>This interface is provided for experimentation and verification purposes only, and <strong>should not be utilized to generate a testnet genesis.json</strong></p>
+  <p>To generate a testnet genesis.json, please <a href="./genesis.html">click here</a>.</p>
+</div>
+<div class="error disconnected wrapper"></div>
+<div class="error syncing wrapper"></div>
+<div id="snapshot" class="wrapper">
+  <div id="welcome">
+    <div class="status"></div>  
+  </div>
+  <div id="registry">
+    <div class="status"></div>  
+  </div>
+  <div id="reclaimer">
+    <div class="status"></div>  
+  </div>
+  <div id="distribute">
+    <div class="status"></div>  
+  </div>
+  <div id="complete">
+    <div class="status"></div>  
+  </div>
+  <div class="loader">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+          <feBlend in="SourceGraphic" in2="goo"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+    <div class="blob blob-0"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="blob blob-5"></div>
+  </div>
+</div>
+
+</body>
+</html>

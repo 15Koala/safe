@@ -1,0 +1,144 @@
+{
+  "types": [{
+      "new_type_name": "data_str",
+      "type": "uint64"
+    },{
+      "new_type_name": "data_num",
+      "type": "uint32"
+    }
+  ],
+  "structs": [{
+      "name": "afc_tokens",
+      "base": "",
+      "fields": {
+        "quantity": "uint64"
+      }
+    },{
+      "name": "bill",
+      "base": "",
+      "fields": {
+        "name": "uint64",
+        "quantity": "afc_tokens"
+      }
+    },{
+      "name": "assert",
+      "base": "",
+      "fields": {
+        "hash_route": "data_str",
+        "checksum": "data_str",
+        "size": "data_num",
+        "records": "data_num",
+        "expire_at": "data_num",
+        "owner": "data_str"
+      }
+    },{
+      "name": "upload_transfer",
+      "base": "assert",
+      "fields": {
+        "uuid": "data_str"
+      }
+    },{
+      "name": "query_bid",
+      "base": "",
+      "fields": {
+        "uuid": "data_str",
+        "buyer": "account_name",
+        "req_checksum": "data_str",
+        "hash_route": "data_str",
+        "req_size": "data_num",
+        "req_records": "data_num",
+        "req_time": "uint32"
+      }
+    },{
+      "name": "query_ask",
+      "base": "",
+      "fields": {
+        "uuid": "data_str",
+        "miner": "account_name",
+        "req_checksum": "data_str",
+        "resp_checksum": "data_str",
+        "resp_time": "uint32",
+        "bill_of_data": "bill[]",
+        "bill_size": "uint32"
+      }
+    },{
+      "name": "query",
+      "base": "",
+      "fields": {
+        "uuid": "data_str",
+        "buyer": "account_name",
+        "miner": "account_name",
+        "req_checksum": "data_str",
+        "resp_checksum": "data_str",
+        "complete_time": "uint32",
+        "bill_of_data": "bill[]"
+      }
+    },{
+      "name": "data_package",
+      "base": "",
+      "fields": {
+        "uuid": "data_str",
+        "checksum": "data_str",
+        "hash_route": "data_str",
+        "size": "data_num",
+        "records": "data_num",
+        "expire_at": "data_num",
+        "owner": "data_str",
+        "checked": "uint8"
+      }
+    }
+  ],
+  "actions": [{
+      "action_name": "uploadreq",
+      "type": "upload_transfer"
+    },{
+      "action_name": "uploadrsp",
+      "type": "upload_transfer"
+    },{
+      "action_name": "querybid",
+      "type": "query_bid"
+    },{
+      "action_name": "queryask",
+      "type": "query_ask"
+    },{
+      "action_name": "querydvp",
+      "type": "query"
+    }
+  ],
+  "tables": [{
+      "table_name": "bill",
+      "index_type": "i64",
+      "key_names": [
+        "name"
+      ],
+      "key_types": [
+        "uint64"
+      ],
+      "type": "bill"
+    },{
+      "table_name": "assert",
+      "index_type": "i64",
+      "key_names": [
+        "hash_route"
+      ],
+      "key_types": [
+        "data_str"
+      ],
+      "type": "assert"
+    },{
+      "table_name": "datapackage",
+      "index_type": "i64i64i64",
+      "key_names": [
+        "uuid",
+        "checksum",
+        "hash_route"
+      ],
+      "key_types": [
+        "data_str",
+        "data_str",
+        "data_str"
+      ],
+      "type": "data_package"
+    }
+  ]
+}

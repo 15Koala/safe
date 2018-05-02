@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="common/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/jquery.fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header id="index_header">
+        <nav class="navbar navbar-default">
+            <!-- <div class="header_logo">
+                汇链科技
+            </div> -->
+            <!-- <ul class="header_nav">
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="other/SAFEv1.pdf" target="_blank">白皮书</a>
+                </li>
+                <li>
+                    <a href="browser.html">区块链浏览器</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+            </ul> -->
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#index-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">更多</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">汇链科技</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="index-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">首页</a>
+                        </li>
+                        <li>
+                            <a href="other/SAFEv1.pdf" target="_blank">白皮书</a>
+                        </li>
+                        <li>
+                            <a href="browser.html" target="_blank">区块链浏览器</a>
+                        </li>
+                        <li>
+                            <a href="#">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </header>
+
+    <div id="fullpage">
+        <div class="section section_first">
+            <div class="canvas_wrap">
+                <canvas id="index_canvas"></canvas>
+            </div>
+            <!-- <div class="section_image">
+                <img src="images/banner_bubi.png" alt="区块链" />
+            </div> -->
+            <div class="section_center_content">
+                <h2 class="section_first_title">汇联数据交易平台</h2>
+                <p class="section_first_content">数据交易产业链新秩序的缔造者</p>
+            </div>
+        </div>
+        <div class="section section_second">
+            <div class="section_image">
+                <img src="images/banner_bubix_main.png" alt="区块链" />
+            </div>
+            <div class="section_center_content">
+                <h2>不缓存数据</h2>
+                <p>在数据交易过程中，数据通过点对点加密传输，汇联交易平台只对交易存证，不对数据做缓存。</p>
+            </div>
+        </div>
+        <div class="section section_three">
+            <div class="section_image">
+                <img src="images/banner_bumeng_main.png" alt="区块链" />
+            </div>
+            <div class="section_center_content">
+                <h2>数据确权</h2>
+                <p>在数据售卖后，会将售出数据的特定标识记录在区块链上，若发现数据购买者在其他的地方二次售卖，汇链可以溯源，提供证据。</p>
+            </div>
+        </div>
+        <div class="section section_four">
+            <div class="section_image">
+                <img src="images/banner_bunuo_main.png" alt="区块链4">
+            </div>
+            <div class="section_center_content">
+                <h2>透明定价</h2>
+                <p>所有数据商品在汇联交易平台上的定价、价格的波动是透明公开的。有助于充分竞争。</p>
+            </div>
+        </div>
+        <div class="section section_four">
+            <div class="section_image">
+                <img src="images/banner_bunuo_main.png" alt="区块链4">
+            </div>
+            <div class="section_center_content">
+                <h2>统一数据商品标准</h2>
+                <p>汇联交易平台上的数据流通需要遵循统一的数据范式、将数据买卖双方的对接的边际成本降低至零。</p>
+            </div>
+        </div>
+        <div class="section section_four">
+            <div class="section_image">
+                <img src="images/banner_bunuo_main.png" alt="区块链4">
+            </div>
+            <div class="section_center_content">
+                <h2>质量保证</h2>
+                <p>汇联交易平台会对所有在平台上交易的数据进行抽样验证，保证数据的质量</p>
+            </div>
+        </div>
+    </div>
+    <script src="common/js/jquery.min.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <!-- 以下行仅在使用选项scrollOverflow:true的情况下是必需的 -->
+    <script type="text/javascript" src="common/js/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.fullpage.js"></script>
+
+    <script type="text/javascript" src="other/plugin/EasePack.min.js"></script>
+    <script type="text/javascript" src="other/plugin/TweenLite.min.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/index_canvas.js"></script>
+</body>
