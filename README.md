@@ -2,7 +2,7 @@
 
 ### 基于区块链的去中心化数据交易平台
 
-[Wiki](https://github.com/15Koala/safe/wiki)
+# [Wiki](https://github.com/15Koala/safe/wiki)
 
 * 区块链基于eos3.0作为主链
 * safe-sdk 支持java的eos主链sdk，可以完成基础功能调用，实现了独立于keos钱包的轻量化钱包接口，可实现在线web钱包和客户端钱包等应用。
